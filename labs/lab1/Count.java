@@ -1,9 +1,9 @@
-// ******************************************************************* 
+/* 
 // File Name: Count.java
 // 
 // Purpose: count to 5 3 different languages
 // Error type: illegal start of expression
-// *******************************************************************
+*/
 public class Count 
 { 
  public static void main (String[] args) 
