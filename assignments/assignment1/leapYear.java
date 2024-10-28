@@ -11,7 +11,7 @@ public class leapYear {
         } else if (year%4 == 0 || year%100 == 0 && year%400 == 0) {
             System.out.println("The year "+year+" is a leap year!");
         } else {
-            System.out.println("The year: "+year+" isn't leap year");
+            System.out.println("The year: "+year+" isn't a leap year!");
         }
     }
 }
