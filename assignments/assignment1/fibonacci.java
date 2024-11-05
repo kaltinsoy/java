@@ -16,6 +16,7 @@ public class fibonacci {
             b = c;
             ++count;
             }
+        System.out.println("Closest number is: "+a);
         System.out.println("Index is : "+count);
     }
 }
