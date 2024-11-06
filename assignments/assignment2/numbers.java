@@ -2,37 +2,37 @@ import java.util.*;
 
 public class numbers {
     public static void main(String args[]) {
-    ArrayList<Integer> ints = new ArrayList<Integer>();
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Enter positive integer! (Enter -1 to stop!)");
+        ArrayList<Integer> ints = new ArrayList<Integer>();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter positive integer! (Enter -1 to stop!)");
 
-    int counter = 0;
-    double sum = 0;
-    double median = 0;
+        int counter = 0;
+        double sum = 0;
+        double median = 0;
 
-    while (true) {
-        int input1 = scan.nextInt();
-        if (input1 == -1) {
-            break;
-        } else if (input1 > 0) {
-            ints.add(input1);
-            sum += input1;
-            counter++;
-        } else {
-            System.out.println("Not Positive!");
-        }
-    }
-    //Collections.sort(ints);
-    for (int i = 0; i < counter - 1; i++) {
-        int minValue = i;
-        for (int j = i + 1; j < counter; j++) {
-            if (ints.get(j) < ints.get(minValue)) {
-                minValue = j;
+        while (true) {
+            int input1 = scan.nextInt();
+            if (input1 == -1) {
+                break;
+            } else if (input1 > 0) {
+                ints.add(input1);
+                sum += input1;
+                counter++;
+            } else {
+                System.out.println("Not Positive!");
             }
         }
-    int t = ints.get(i);
-    ints.set(i, ints.get(minValue));
-    ints.set(minValue, t);
+        //Collections.sort(ints);
+        for (int i = 0; i < counter - 1; i++) {
+            int minValue = i;
+            for (int j = i + 1; j < counter; j++) {
+                if (ints.get(j) < ints.get(minValue)) {
+                    minValue = j;
+                }
+            }
+        int t = ints.get(i);
+        ints.set(i, ints.get(minValue));
+        ints.set(minValue, t);
 
     }
 
