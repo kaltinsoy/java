@@ -22,7 +22,19 @@ public class numbers {
             System.out.println("Not Positive!");
         }
     }
-    Collections.sort(ints);
+    //Collections.sort(ints);
+    for (int i = 0; i < counter - 1; i++) {
+        int minValue = i;
+        for (int j = i + 1; j < counter; j++) {
+            if (ints.get(j) < ints.get(minValue)) {
+                minValue = j;
+            }
+        }
+    int t = ints.get(i);
+    ints.set(i, ints.get(minValue));
+    ints.set(minValue, t);
+
+    }
 
     
     if (counter == 0) {
