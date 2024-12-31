@@ -9,6 +9,7 @@ public class Account
  private double balance; 
  private String name; 
  private long acctNum; 
+ private static int numAccounts = 0;
  //---------------------------------------------- 
  //Constructor -- initializes balance, owner, and account number 
  //---------------------------------------------- 
@@ -17,15 +18,18 @@ public class Account
  balance = initBal; 
  name = owner; 
  acctNum = number; 
+ ++numAccounts;
  } 
   public Account(double initBal, String owner) 
  { 
  balance = initBal; 
  name = owner;
+ ++numAccounts;
  } 
   public Account(String owner) 
  { 
  name = owner;  
+ ++numAccounts;
  } 
  //---------------------------------------------- 
  // Checks to see if balance is sufficient for withdrawal. 
@@ -59,6 +63,16 @@ public class Account
  { 
  return balance; 
  } 
+// Static
+ public static int getNumAccounts()
+ {
+    return numAccounts;
+ }
+
+ public void close () {
+    name += " Closed";
+    
+ }
  //---------------------------------------------- 
  // Returns a string containing the name, account number, and balance. 
  //---------------------------------------------- 
@@ -66,6 +80,7 @@ public class Account
  { 
  return "Name:" + name + 
 "\nAccount Number: " + acctNum + 
-"\nBalance: " + balance; 
+"\nBalance: " + balance;  
+//"\nTotal account number: " + numAccounts;
  } 
 } 
