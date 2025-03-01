@@ -5,6 +5,7 @@ public class demo {
 
         car1.setYear(2012);
         System.out.println(car1.getYear());
+        car1.setNumDoors(5);
         System.out.println(car1.getNumDoors());
 
         motor1.setEngineType("Gasoline");
